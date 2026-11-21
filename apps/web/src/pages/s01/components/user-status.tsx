@@ -1,18 +1,19 @@
 import { useOnline } from "@/hooks/use-online";
+import { CardDescription, CardHeader, CardTitle } from "@workspace/ui/components/card";
 
 export const UserStatus = () => {
     const isOnline = useOnline();
     return (
-        <div>
-            <h1>
+        <CardHeader>
+            <CardTitle>
                 Need Help?
-            </h1>
-            <div className="flex items-center gap-2">
+            </CardTitle>
+            <CardDescription className="flex items-center gap-2">
                 <div className="size-2 rounded-full" style={{ backgroundColor: isOnline ? "green" : "red" }} />
                 <span>
                     Type your message below to get help.
                 </span>
-            </div>
-        </div>
+            </CardDescription>
+        </CardHeader>
     )
 }

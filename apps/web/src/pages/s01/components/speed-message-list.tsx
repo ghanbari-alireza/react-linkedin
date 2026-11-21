@@ -1,3 +1,4 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@workspace/ui/components/card";
 import {
     Item,
     ItemContent,
@@ -22,11 +23,7 @@ const SpeedMessage = ({ speed }: SpeedMessageProps) => {
 
     return (
         <Item
-            data-speed-over={isSpeedOver}
-            className="
-                data-[speed-over=true]:bg-destructive/10
-                data-[speed-over=false]:bg-success/10
-            "
+            className={isSpeedOver ? "bg-destructive/10" : "bg-success/10"}
         >
             <ItemContent>
                 <ItemTitle>{title}</ItemTitle>
@@ -40,10 +37,19 @@ export const SpeedMessageList = () => {
     const speeds: number[] = [80, 90, 40];
 
     return (
-        <ItemGroup>
-            {speeds.map((speed, i) => (
-                <SpeedMessage speed={speed} key={i} />
-            ))}
-        </ItemGroup>
+        <Card>
+            <CardHeader>
+                <CardTitle>
+                    Speed Messages
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+                <ItemGroup>
+                    {speeds.map((speed, i) => (
+                        <SpeedMessage speed={speed} key={i} />
+                    ))}
+                </ItemGroup>
+            </CardContent>
+        </Card>
     );
 };
