@@ -1,7 +1,7 @@
 // import S01 from "@/pages/s01"
 // import { Button } from "@workspace/ui/components/button"
 
-import S03 from "./pages/s02";
+import S03 from "./pages/s03";
 
 export function App() {
   return <S03 />
