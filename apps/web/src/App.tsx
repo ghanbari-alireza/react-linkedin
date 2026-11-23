@@ -1,8 +1,11 @@
-import S01 from "@/pages/s01"
+// import S01 from "@/pages/s01"
 // import { Button } from "@workspace/ui/components/button"
 
+import S03 from "./pages/s02";
+
 export function App() {
-  return <S01 />
+  return <S03 />
+  // return <S01 />
   // return (
   //   <div className="flex min-h-svh p-6">
   //     <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
